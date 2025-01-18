@@ -1,0 +1,2 @@
+# Transformer_Scratch_NextTokenPrediction_V0
+Next token prediction in Transformer
