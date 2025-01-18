@@ -24,3 +24,51 @@ This project implements a small GPT (Generative Pre-trained Transformer) model t
 - Support for both CPU and GPU inference
 
 ## Files Structure 
+
+    project/
+    ├── app.py # Gradio interface for the model
+    ├── model.py # Model architecture definition
+    ├── requirements.txt # Project dependencies
+    └── README.md # Project documentation
+
+## Installation
+
+1. Clone the repository
+2. Install dependencies:
+    pip install -r requirements.txt
+
+## Model Details
+
+- **Tokenizer**: GPT-2 tokenizer (50,257 tokens)
+- **Context Window**: 1024 tokens
+- **Generation Method**: Top-k sampling with temperature
+- **Quantization**: 8-bit integer quantization for efficient storage
+
+## Dependencies
+
+- torch
+- gradio
+- tiktoken
+- numpy
+- huggingface-hub
+
+## Deployment
+
+The model is deployed on Hugging Face Spaces with a Gradio interface. Visit [Space URL] to try it out.
+
+## Training
+
+The model was trained on a custom dataset with the following specifications:
+    - Batch size: 4
+    - Sequence length: 32
+    - Learning rate: 3e-4
+    - Optimizer: AdamW
+    - Steps: 5000
+
+## Limitations
+
+    - Maximum input length: 1024 tokens
+    - Generation length: 10 tokens per request
+    - Model size optimized for deployment, trading off 
+
+
